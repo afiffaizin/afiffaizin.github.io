@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TeamMatch - Profil & Portofolio Mahasiswa</title>
+  </head>
+  <body bgcolor="#f4f7f6" text="black">
+    <br>
+    <table align="center" bgcolor="#ffffff" cellpadding="30" cellspacing="0" width="800">
+      <tr>
+        <td>
+          <center>
+            <font size="5">
+              <b>Form Profil & Portofolio Mahasiswa</b>
+            </font>
+            <br><br>
+            <font size="2">
+              Silakan isi data diri dan pengalaman portofolio Anda untuk mempermudah pencocokan tim lomba di TeamMatch PNC.
+            </font>
+            <br><br>
+          </center>
+
+          <form action="dashboard.html" method="get">
+            <font size="3">
+              
+              <fieldset>
+                <legend><b>1. Data Diri Mahasiswa</b></legend>
+                <table width="100%" cellpadding="8" cellspacing="0" border="0">
+                  <tr>
+                    <td width="35%" align="right"><b>NIM (Nomor Induk Mahasiswa):</b></td>
+                    <td><input type="text" name="nim" placeholder="Contoh: 250315025" size="45" required /></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><b>Nama Lengkap:</b></td>
+                    <td><input type="text" name="nama" placeholder="Nama sesuai SIAKAD" size="45" required /></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><b>Program Studi:</b></td>
+                    <td>
+                      <select name="prodi" required>
+                        <option value="">-- Pilih Program Studi --</option>
+                        <option value="D4 TRPL">D4 Rekayasa Perangkat Lunak</option>
+                        <option value="D4 RKS">D4 Rekayasa Keamanan Siber</option>
+                        <option value="D3 TI">D3 Teknik Informatika</option>
+                        <option value="D3 Akuntansi">D3 Akuntansi</option>
+                        <option value="Lainnya">Lainnya</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right"><b>Semester Saat Ini:</b></td>
+                    <td><input type="number" name="semester" min="1" max="8" value="3" required /></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><b>Nomor WhatsApp / HP Active:</b></td>
+                    <td><input type="tel" name="no_hp" placeholder="08xxxxxxxxxx" size="45" required /></td>
+                  </tr>
+                </table>
+              </fieldset>
+              <br>
+
+              <fieldset>
+                <legend><b>2. Minat & Keahlian Utama</b></legend>
+                <table width="100%" cellpadding="8" cellspacing="0" border="0">
+                  <tr>
+                    <td width="35%" align="right"><b>Role Utama yang Diminati:</b></td>
+                    <td>
+                      <select name="role_minat" required>
+                        <option value="">-- Pilih Role --</option>
+                        <option value="Business Analyst">Business Analyst</option>
+                        <option value="UI/UX Designer">UI/UX Designer</option>
+                        <option value="Frontend Developer">Frontend Developer</option>
+                        <option value="Backend Developer">Backend Developer</option>
+                        <option value="Cyber Security Specialist">Cyber Security Specialist</option>
+                        <option value="Technical Writer / KTI">Technical Writer / KTI</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right" valign="top"><b>Skill / Keahlian yang Dikuasai:</b></td>
+                    <td>
+                      <input type="checkbox" name="skills[]" value="HTML/CSS" /> HTML / CSS / JavaScript<br>
+                      <input type="checkbox" name="skills[]" value="Figma" /> UI/UX Design (Figma, Draw.io)<br>
+                      <input type="checkbox" name="skills[]" value="Business Analysis" /> Analisis Bisnis & System Requirement<br>
+                      <input type="checkbox" name="skills[]" value="Python/PHP" /> Pemrograman (PHP / Python / Java)<br>
+                      <input type="checkbox" name="skills[]" value="Networking/Security" /> Jaringan & Keamanan Siber
+                    </td>
+                  </tr>
+                </table>
+              </fieldset>
+              <br>
+
+              <fieldset>
+                <legend><b>3. Portofolio & Pengalaman Proyek/Lomba</b></legend>
+                <table width="100%" cellpadding="8" cellspacing="0" border="0">
+                  <tr>
+                    <td width="35%" align="right" valign="top"><b>Ringkasan Profil & Pengalaman Singkat:</b></td>
+                    <td>
+                      <textarea name="deskripsi_diri" rows="5" cols="45" placeholder="Jelaskan secara singkat pengalaman proyek kuliah, organisasi, atau lomba yang pernah kamu ikuti..."></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="right"><b>Link Github / Portfolio Online / LinkedIn:</b></td>
+                    <td><input type="url" name="link_github" placeholder="https://github.com/username" size="45" /></td>
+                  </tr>
+                  <tr>
+                    <td align="right"><b>Upload Dokumen Portofolio / CV / Sertifikat (PDF):</b></td>
+                    <td><input type="file" name="file_cv" accept=".pdf" /></td>
+                  </tr>
+                </table>
+              </fieldset>
+              <br>
+
+              <center>
+                <input type="submit" value="     Simpan Profil & Portofolio     " />
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="reset" value="     Batal / Reset     " />
+              </center>
+            </font>
+          </form>
+        </td>
+      </tr>
+    </table>
+    <br><br>
+  </body>
+</html>
