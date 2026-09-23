@@ -1,48 +1,253 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard</title>
+    <title>Dashboard - TeamMatch PNC</title>
+    <!-- Google Fonts & External Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body bgcolor="#f4f7f6" text="black">
-    <br /><br /><br /><br /><br /><br />
-    <table
-      align="center"
-      bgcolor="#ffffff"
-      cellpadding="40"
-      cellspacing="0"
-      width="600"
-    >
-      <tr>
-        <td>
-          <center>
-            <font size="6">
-              <b>Selamat Datang di TeamMatch PNC</b>
-            </font>
-            <br /><br />
-            <font size="3">
-              Lengkapi profil Anda untuk mulai menemukan partner lomba!
-            </font>
-            <br /><br /><br />
+  <body>
+    <div class="page-wrapper">
+      <!-- Navbar -->
+      <header class="navbar">
+        <div class="nav-container">
+          <a href="dashboard.html" class="nav-brand">
+            <div class="brand-icon-box">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <div class="brand-text-wrap">
+              <span class="brand-title">TeamMatch <span>PNC</span></span>
+              <span class="brand-subtitle">Portal Mahasiswa</span>
+            </div>
+          </a>
 
-            <table cellpadding="10" cellspacing="0" border="0">
-              <tr>
-                <td align="center">
-                  <form action="profilMahasiswa.html" method="post">
-                    <input type="submit" value="Lengkapi Profil" />
-                  </form>
-                </td>
-                <td align="center">
-                  <form action="login.html" method="post">
-                    <input type="submit" value="Keluar" />
-                  </form>
-                </td>
-              </tr>
-            </table>
-          </center>
-        </td>
-      </tr>
-    </table>
+          <div class="nav-actions">
+            <div class="user-pill">
+              <div class="user-avatar-sm">M</div>
+              <span class="user-name-sm">Mahasiswa PNC</span>
+            </div>
+            <a href="index.html" class="btn btn-outline btn-sm">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                <polyline points="16 17 21 12 16 7" />
+                <line x1="21" x2="9" y1="12" y2="12" />
+              </svg>
+              <span>Keluar</span>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="container-medium">
+          <div class="card">
+            <div class="welcome-hero">
+              <!-- Avatar Hero -->
+              <div class="avatar-large-wrap">
+                <div class="avatar-large">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="44"
+                    height="44"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="8" r="5" />
+                    <path d="M20 21a8 8 0 0 0-16 0" />
+                  </svg>
+                </div>
+                <span class="status-dot" title="Perlu melengkapi profil"></span>
+              </div>
+
+              <!-- Greeting -->
+              <h1 class="hero-title">Selamat Datang di TeamMatch PNC!</h1>
+              <p class="hero-subtitle">
+                Temukan rekan tim ideal dengan keahlian komplementer untuk
+                berkompetisi di KMIPN, Gemastik, PKM, dan ajang inovasi lainnya.
+              </p>
+
+              <!-- Status Alert Banner -->
+              <div class="status-banner">
+                <div class="status-banner-left">
+                  <span class="badge badge-warning">Perhatian</span>
+                  <div>
+                    <div class="status-banner-title">
+                      Profil Anda Belum Lengkap
+                    </div>
+                    <div class="status-banner-desc">
+                      Isi data minat, peran, dan portofolio agar mahasiswa lain
+                      dapat mengundang Anda ke tim lomba.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Feature / Stat Highlight Cards -->
+              <div class="dashboard-stats-grid">
+                <div class="stat-card">
+                  <div class="stat-card-header">
+                    <span class="stat-card-title">Lomba Aktif</span>
+                    <span class="stat-card-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <circle cx="12" cy="8" r="6" />
+                        <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="stat-card-value">12+</div>
+                  <div class="stat-card-sub">KMIPN, Gemastik, PKM</div>
+                </div>
+
+                <div class="stat-card">
+                  <div class="stat-card-header">
+                    <span class="stat-card-title">Talenta Kampus</span>
+                    <span class="stat-card-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="stat-card-value">48+</div>
+                  <div class="stat-card-sub">Mahasiswa Siap Kolaborasi</div>
+                </div>
+
+                <div class="stat-card">
+                  <div class="stat-card-header">
+                    <span class="stat-card-title">Status Tim</span>
+                    <span class="stat-card-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                        <polyline points="22 4 12 14.01 9 11.01" />
+                      </svg>
+                    </span>
+                  </div>
+                  <div class="stat-card-value">Mencari</div>
+                  <div class="stat-card-sub">Belum tergabung tim</div>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="dashboard-cta-row">
+                <form action="profilMahasiswa.html" method="get" style="display: inline;">
+                  <button type="submit" class="btn btn-primary">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" />
+                      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" />
+                    </svg>
+                    <span>Lengkapi Profil Sekarang</span>
+                  </button>
+                </form>
+
+                <form action="index.html" method="get" style="display: inline;">
+                  <button type="submit" class="btn btn-outline">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" />
+                      <polyline points="16 17 21 12 16 7" />
+                      <line x1="21" x2="9" y1="12" y2="12" />
+                    </svg>
+                    <span>Keluar</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="page-footer">
+        <p>© 2026 Politeknik Negeri Cilacap - TeamMatch PNC</p>
+      </footer>
+    </div>
   </body>
 </html>

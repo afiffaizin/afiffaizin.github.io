@@ -1,127 +1,428 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TeamMatch - Profil & Portofolio Mahasiswa</title>
+    <!-- Google Fonts & External Stylesheet -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body bgcolor="#f4f7f6" text="black">
-    <br>
-    <table align="center" bgcolor="#ffffff" cellpadding="30" cellspacing="0" width="800">
-      <tr>
-        <td>
-          <center>
-            <font size="5">
-              <b>Form Profil & Portofolio Mahasiswa</b>
-            </font>
-            <br><br>
-            <font size="2">
-              Silakan isi data diri dan pengalaman portofolio Anda untuk mempermudah pencocokan tim lomba di TeamMatch PNC.
-            </font>
-            <br><br>
-          </center>
+  <body>
+    <div class="page-wrapper">
+      <!-- Navbar -->
+      <header class="navbar">
+        <div class="nav-container">
+          <a href="dashboard.html" class="nav-brand">
+            <div class="brand-icon-box">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <div class="brand-text-wrap">
+              <span class="brand-title">TeamMatch <span>PNC</span></span>
+              <span class="brand-subtitle">Portal Mahasiswa</span>
+            </div>
+          </a>
 
-          <form action="dashboard.html" method="get">
-            <font size="3">
-              
-              <fieldset>
-                <legend><b>1. Data Diri Mahasiswa</b></legend>
-                <table width="100%" cellpadding="8" cellspacing="0" border="0">
-                  <tr>
-                    <td width="35%" align="right"><b>NIM (Nomor Induk Mahasiswa):</b></td>
-                    <td><input type="text" name="nim" placeholder="Contoh: 250315025" size="45" required /></td>
-                  </tr>
-                  <tr>
-                    <td align="right"><b>Nama Lengkap:</b></td>
-                    <td><input type="text" name="nama" placeholder="Nama sesuai SIAKAD" size="45" required /></td>
-                  </tr>
-                  <tr>
-                    <td align="right"><b>Program Studi:</b></td>
-                    <td>
-                      <select name="prodi" required>
-                        <option value="">-- Pilih Program Studi --</option>
-                        <option value="D4 TRPL">D4 Rekayasa Perangkat Lunak</option>
-                        <option value="D4 RKS">D4 Rekayasa Keamanan Siber</option>
-                        <option value="D3 TI">D3 Teknik Informatika</option>
-                        <option value="D3 Akuntansi">D3 Akuntansi</option>
-                        <option value="Lainnya">Lainnya</option>
-                      </select>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="right"><b>Semester Saat Ini:</b></td>
-                    <td><input type="number" name="semester" min="1" max="8" value="3" required /></td>
-                  </tr>
-                  <tr>
-                    <td align="right"><b>Nomor WhatsApp / HP Active:</b></td>
-                    <td><input type="tel" name="no_hp" placeholder="08xxxxxxxxxx" size="45" required /></td>
-                  </tr>
-                </table>
-              </fieldset>
-              <br>
+          <div class="nav-actions">
+            <a href="dashboard.html" class="btn btn-outline btn-sm">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="m15 18-6-6 6-6" />
+              </svg>
+              <span>Kembali ke Dashboard</span>
+            </a>
+          </div>
+        </div>
+      </header>
 
-              <fieldset>
-                <legend><b>2. Minat & Keahlian Utama</b></legend>
-                <table width="100%" cellpadding="8" cellspacing="0" border="0">
-                  <tr>
-                    <td width="35%" align="right"><b>Role Utama yang Diminati:</b></td>
-                    <td>
-                      <select name="role_minat" required>
-                        <option value="">-- Pilih Role --</option>
-                        <option value="Business Analyst">Business Analyst</option>
-                        <option value="UI/UX Designer">UI/UX Designer</option>
-                        <option value="Frontend Developer">Frontend Developer</option>
-                        <option value="Backend Developer">Backend Developer</option>
-                        <option value="Cyber Security Specialist">Cyber Security Specialist</option>
-                        <option value="Technical Writer / KTI">Technical Writer / KTI</option>
-                      </select>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="right" valign="top"><b>Skill / Keahlian yang Dikuasai:</b></td>
-                    <td>
-                      <input type="checkbox" name="skills[]" value="HTML/CSS" /> HTML / CSS / JavaScript<br>
-                      <input type="checkbox" name="skills[]" value="Figma" /> UI/UX Design (Figma, Draw.io)<br>
-                      <input type="checkbox" name="skills[]" value="Business Analysis" /> Analisis Bisnis & System Requirement<br>
-                      <input type="checkbox" name="skills[]" value="Python/PHP" /> Pemrograman (PHP / Python / Java)<br>
-                      <input type="checkbox" name="skills[]" value="Networking/Security" /> Jaringan & Keamanan Siber
-                    </td>
-                  </tr>
-                </table>
-              </fieldset>
-              <br>
+      <!-- Main Form Content -->
+      <main class="main-content">
+        <div class="container-wide">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-icon-badge">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="28"
+                  height="28"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+                  <circle cx="9" cy="7" r="4" />
+                  <polyline points="16 11 18 13 22 9" />
+                </svg>
+              </div>
+              <h1 class="card-title">Form Profil & Portofolio Mahasiswa</h1>
+              <p class="card-desc">
+                Silakan isi data diri dan pengalaman portofolio Anda untuk
+                mempermudah pencocokan tim lomba di TeamMatch PNC.
+              </p>
+            </div>
 
-              <fieldset>
-                <legend><b>3. Portofolio & Pengalaman Proyek/Lomba</b></legend>
-                <table width="100%" cellpadding="8" cellspacing="0" border="0">
-                  <tr>
-                    <td width="35%" align="right" valign="top"><b>Ringkasan Profil & Pengalaman Singkat:</b></td>
-                    <td>
-                      <textarea name="deskripsi_diri" rows="5" cols="45" placeholder="Jelaskan secara singkat pengalaman proyek kuliah, organisasi, atau lomba yang pernah kamu ikuti..."></textarea>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td align="right"><b>Link Github / Portfolio Online / LinkedIn:</b></td>
-                    <td><input type="url" name="link_github" placeholder="https://github.com/username" size="45" /></td>
-                  </tr>
-                  <tr>
-                    <td align="right"><b>Upload Dokumen Portofolio / CV / Sertifikat (PDF):</b></td>
-                    <td><input type="file" name="file_cv" accept=".pdf" /></td>
-                  </tr>
-                </table>
-              </fieldset>
-              <br>
+            <!-- Form -->
+            <form action="dashboard.html" method="get">
+              <!-- Section 1: Data Diri Mahasiswa -->
+              <div class="form-section">
+                <div class="section-legend">
+                  <span class="legend-number">1</span>
+                  <span>Data Diri Mahasiswa</span>
+                </div>
 
-              <center>
-                <input type="submit" value="     Simpan Profil & Portofolio     " />
-                &nbsp;&nbsp;&nbsp;&nbsp;
-                <input type="reset" value="     Batal / Reset     " />
-              </center>
-            </font>
-          </form>
-        </td>
-      </tr>
-    </table>
-    <br><br>
+                <div class="form-grid">
+                  <div class="form-group">
+                    <label class="form-label" for="nim">
+                      NIM (Nomor Induk Mahasiswa) <span class="req-star">*</span>
+                    </label>
+                    <input
+                      id="nim"
+                      class="form-control"
+                      type="text"
+                      name="nim"
+                      placeholder="Contoh: 250315025"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="nama">
+                      Nama Lengkap <span class="req-star">*</span>
+                    </label>
+                    <input
+                      id="nama"
+                      class="form-control"
+                      type="text"
+                      name="nama"
+                      placeholder="Nama sesuai SIAKAD"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="prodi">
+                      Program Studi <span class="req-star">*</span>
+                    </label>
+                    <select id="prodi" class="form-control" name="prodi" required>
+                      <option value="">-- Pilih Program Studi --</option>
+                      <option value="D4 TRPL">D4 Rekayasa Perangkat Lunak</option>
+                      <option value="D4 RKS">D4 Rekayasa Keamanan Siber</option>
+                      <option value="D3 TI">D3 Teknik Informatika</option>
+                      <option value="D3 Akuntansi">D3 Akuntansi</option>
+                      <option value="Lainnya">Lainnya</option>
+                    </select>
+                  </div>
+
+                  <div class="form-group">
+                    <label class="form-label" for="semester">
+                      Semester Saat Ini <span class="req-star">*</span>
+                    </label>
+                    <input
+                      id="semester"
+                      class="form-control"
+                      type="number"
+                      name="semester"
+                      min="1"
+                      max="8"
+                      value="3"
+                      required
+                    />
+                  </div>
+
+                  <div class="form-group form-col-full">
+                    <label class="form-label" for="no_hp">
+                      Nomor WhatsApp / HP Active <span class="req-star">*</span>
+                    </label>
+                    <input
+                      id="no_hp"
+                      class="form-control"
+                      type="tel"
+                      name="no_hp"
+                      placeholder="08xxxxxxxxxx"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 2: Minat & Keahlian Utama -->
+              <div class="form-section">
+                <div class="section-legend">
+                  <span class="legend-number">2</span>
+                  <span>Minat & Keahlian Utama</span>
+                </div>
+
+                <div class="form-grid">
+                  <div class="form-group form-col-full">
+                    <label class="form-label" for="role_minat">
+                      Role Utama yang Diminati <span class="req-star">*</span>
+                    </label>
+                    <select
+                      id="role_minat"
+                      class="form-control"
+                      name="role_minat"
+                      required
+                    >
+                      <option value="">-- Pilih Role --</option>
+                      <option value="Business Analyst">Business Analyst</option>
+                      <option value="UI/UX Designer">UI/UX Designer</option>
+                      <option value="Frontend Developer">Frontend Developer</option>
+                      <option value="Backend Developer">Backend Developer</option>
+                      <option value="Cyber Security Specialist">
+                        Cyber Security Specialist
+                      </option>
+                      <option value="Technical Writer / KTI">
+                        Technical Writer / KTI
+                      </option>
+                    </select>
+                  </div>
+
+                  <div class="form-group form-col-full">
+                    <label class="form-label">
+                      Skill / Keahlian yang Dikuasai (Pilih yang relevan):
+                    </label>
+                    <div class="skills-pills-wrap">
+                      <div class="skill-pill-item">
+                        <input
+                          type="checkbox"
+                          id="skill-html"
+                          name="skills[]"
+                          value="HTML/CSS"
+                        />
+                        <label class="skill-pill-label" for="skill-html">
+                          <span class="skill-check-icon">✓</span>
+                          <span>HTML / CSS / JavaScript</span>
+                        </label>
+                      </div>
+
+                      <div class="skill-pill-item">
+                        <input
+                          type="checkbox"
+                          id="skill-figma"
+                          name="skills[]"
+                          value="Figma"
+                        />
+                        <label class="skill-pill-label" for="skill-figma">
+                          <span class="skill-check-icon">✓</span>
+                          <span>UI/UX Design (Figma, Draw.io)</span>
+                        </label>
+                      </div>
+
+                      <div class="skill-pill-item">
+                        <input
+                          type="checkbox"
+                          id="skill-ba"
+                          name="skills[]"
+                          value="Business Analysis"
+                        />
+                        <label class="skill-pill-label" for="skill-ba">
+                          <span class="skill-check-icon">✓</span>
+                          <span>Analisis Bisnis & System Requirement</span>
+                        </label>
+                      </div>
+
+                      <div class="skill-pill-item">
+                        <input
+                          type="checkbox"
+                          id="skill-prog"
+                          name="skills[]"
+                          value="Python/PHP"
+                        />
+                        <label class="skill-pill-label" for="skill-prog">
+                          <span class="skill-check-icon">✓</span>
+                          <span>Pemrograman (PHP / Python / Java)</span>
+                        </label>
+                      </div>
+
+                      <div class="skill-pill-item">
+                        <input
+                          type="checkbox"
+                          id="skill-sec"
+                          name="skills[]"
+                          value="Networking/Security"
+                        />
+                        <label class="skill-pill-label" for="skill-sec">
+                          <span class="skill-check-icon">✓</span>
+                          <span>Jaringan & Keamanan Siber</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Section 3: Portofolio & Pengalaman -->
+              <div class="form-section">
+                <div class="section-legend">
+                  <span class="legend-number">3</span>
+                  <span>Portofolio & Pengalaman Proyek/Lomba</span>
+                </div>
+
+                <div class="form-grid">
+                  <div class="form-group form-col-full">
+                    <label class="form-label" for="deskripsi_diri">
+                      Ringkasan Profil & Pengalaman Singkat
+                    </label>
+                    <textarea
+                      id="deskripsi_diri"
+                      class="form-control"
+                      name="deskripsi_diri"
+                      rows="4"
+                      placeholder="Jelaskan secara singkat pengalaman proyek kuliah, organisasi, atau lomba yang pernah kamu ikuti..."
+                    ></textarea>
+                  </div>
+
+                  <div class="form-group form-col-full">
+                    <label class="form-label" for="link_github">
+                      Link Github / Portfolio Online / LinkedIn
+                    </label>
+                    <input
+                      id="link_github"
+                      class="form-control"
+                      type="url"
+                      name="link_github"
+                      placeholder="https://github.com/username atau https://linkedin.com/in/username"
+                    />
+                  </div>
+
+                  <div class="form-group form-col-full">
+                    <label class="form-label">
+                      Upload Dokumen Portofolio / CV / Sertifikat (Format PDF)
+                    </label>
+                    <div class="file-upload-box" id="fileUploadContainer">
+                      <div class="file-upload-icon">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path
+                            d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                          />
+                          <polyline points="14 2 14 8 20 8" />
+                          <line x1="12" y1="18" x2="12" y2="12" />
+                          <line x1="9" y1="15" x2="15" y2="15" />
+                        </svg>
+                      </div>
+                      <div class="file-upload-text" id="fileUploadLabel">
+                        Klik atau seret file PDF ke sini
+                      </div>
+                      <div class="file-upload-hint">
+                        Maksimal ukuran file 10 MB (Hanya .pdf)
+                      </div>
+                      <input
+                        type="file"
+                        name="file_cv"
+                        id="file_cv"
+                        accept=".pdf"
+                        class="file-upload-input"
+                        onchange="handleFileSelect(this)"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Form Action Buttons -->
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" />
+                    <polyline points="17 21 17 13 7 13 7 21" />
+                    <polyline points="7 3 7 8 15 8" />
+                  </svg>
+                  <span>Simpan Profil & Portofolio</span>
+                </button>
+
+                <button type="reset" class="btn btn-secondary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                    <path d="M3 3v5h5" />
+                  </svg>
+                  <span>Batal / Reset</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="page-footer">
+        <p>© 2026 Politeknik Negeri Cilacap - TeamMatch PNC</p>
+      </footer>
+    </div>
+
+    <!-- Small UI Helper for File Upload Feedback -->
+    <script>
+      function handleFileSelect(input) {
+        const label = document.getElementById('fileUploadLabel');
+        if (input.files && input.files.length > 0) {
+          label.innerHTML = '<strong>' + input.files[0].name + '</strong> (' + (input.files[0].size / 1024).toFixed(1) + ' KB)';
+          label.style.color = '#2563eb';
+        } else {
+          label.textContent = 'Klik atau seret file PDF ke sini';
+          label.style.color = '';
+        }
+      }
+    </script>
   </body>
 </html>
